@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASMA</title>
+    <style>
+        :root {
+            --bg-color: #46b4d1;
+            --white: #ffffff;
+            --text-dark: #333333;
+            --btn-dark: #1a1a1a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        /* Títulos Principais */
+        .header-box {
+            background-color: var(--white);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #555;
+            font-style: italic;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* Descrição */
+        .description {
+            color: var(--white);
+            font-size: 1.2rem;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-align: left;
+            padding: 0 10px;
+        }
+
+        /* Grid de Sintomas */
+        .grid-sintomas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background-color: var(--white);
+            padding: 25px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Efeito Pulse */
+        .pulse {
+            animation: pulse-animation 2s infinite;
+        }
+
+        @keyframes pulse-animation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); box-shadow: 0 0 15px rgba(255,255,255,0.5); }
+            100% { transform: scale(1); }
+        }
+
+        /* Botões */
+        .footer-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn {
+            background-color: var(--btn-dark);
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+         .btn a{
+                list-style: none;
+                text-decoration: none;
+                color: white;
+            }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        /* Responsividade para telas pequenas */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            .grid-sintomas { grid-template-columns: 1fr; }
+            .footer-buttons { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header-box">
+            <h1>SARNA "OVELLE"</h1>
+        </div>
+
+        <div class="description">
+            <p>A Sarna e uma doenca contagiosa da pele onde apresenta tuneis <br> escavados pelo pelo parasita na
+                pele.
+                <br>
+                Transmite-se atraves da falta de higiene; <br> Locais aglomerados propensos a humidade e partilha de
+                trajes pessoais.</p>
+                <img src="varicela-removebg-preview.png" alt="Imagem de sarna" width="40%" height="40%">
+        </div>
+
+        <div class="header-box">
+            <h2>Sinais e sintomas</h2>
+        </div>
+
+        <div class="grid-sintomas">
+            <div class="card">Comichao intensa, acompanhada de erritema na pele;</div>
+             <div class="card">Pustulas, crostas e descamacoes <br> "Como se a pele tivesse sido escavada e com pus"</div>
+              <div class="card"></div>
+
+            <div class="card">Lesoes frequentes nas maos, punhos, axilas e regioes proximo as nadegas;</div>
+            <div class="card">Afecta bastante as criancas (Parte da cabeca e punhos);</div>
+            <div class="card"></div>
+        </div>
+
+        <div class="footer-buttons">
+            <button class="btn" onclick="acao('voltar')"><a href="DOENCAS DE PELE.html">Voltar</a></button>
+            <button class="btn" onclick="acao('Tratamento')"><a href="T.SARNA.html">Tratamento</a></button>
+        </div>
+    </div>
+
+    <script>
+        function acao(tipo) {
+            console.log("Botão clicado: " + tipo);
+            alert("Você clicou em: " + tipo);
+        }
+
+        // Adicionando efeito pulse dinamicamente nos cards ao passar o mouse
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => card.classList.add('pulse'));
+            card.addEventListener('mouseleave', () => card.classList.remove('pulse'));
+        });
+    </script>
+
+</body>
+</html>

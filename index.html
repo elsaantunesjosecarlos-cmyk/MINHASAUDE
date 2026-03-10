@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html</title>
+
+    <style>
+
+       
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background-color: #31C1E1; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa {
+    width: 100%;
+    max-width: 400px;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.circulo {
+    background-color: #1a1a1a;
+    width: 220px;
+    height: 140px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.circulo h1 {
+    color: white;
+    font-size: 48px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.tema {
+    color: white;
+    margin-top: 15px;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 38px;
+}
+
+.estetoscopio {
+    display: flex;
+    align-items: center;
+}
+
+.imagem-do-estetoscopio {
+    width: 290px;
+    color: rgb(6, 127, 154);
+}
+
+.seguir {
+    position: absolute;
+    bottom: 40px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 35px;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.seguir a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+.seguir:hover {
+    background-color: #31C1E1;
+    transition: 0.5s;
+    color: rgb(9, 10, 12);
+}
+
+    </style>
+
+</head>
+<body>
+
+    <main class="caixa">
+        <div class="circulo">
+            <h1>MH</h1>
+        </div>
+
+        <h2 class="tema">Minha Saude</h2>
+
+        <div class="Estetoscopio">
+            <img src="Estetoscopio-removebg-preview (1).png" alt="Estetoscópio" class="imagem-do-estetoscopio">
+        </div>
+
+        <button class="seguir"><a href="MENU DE CADASTRO.html">Seguir</a></button>
+    </main>
+
+</body>
+</html>
